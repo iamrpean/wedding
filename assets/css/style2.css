@@ -2682,7 +2682,7 @@ main {
 .home .home-inner .wow {
   position: relative;
   left: 2vw;
-  top: 39vh;
+  top: 60vh;
   transition: top 0.7s ease-in-out;
   cursor: default;
   -webkit-user-select: none;
