@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="assets/img/favicon.ico" />
     <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/locomotive-scroll.css">
     <style data-react-helmet="true" type="text/css">
         html.has-scroll-smooth {
             overflow: hidden !important;
@@ -77,7 +78,7 @@
     <div id="container">
         <div id="container">
             <main>
-                <div class="scroll-container">
+                <div class="scroll-container" data-scroll-container>
                     <div class="mobile-menu show">
                         <div class="navigation expanded">
                             <div class="menu-items expanded">
@@ -119,21 +120,21 @@
                         </div>
                     </div>
 
-                    <section class="home" id="home">
+                    <section data-scroll-section class="home" id="home">
                         <div class="gatsby-image-wrapper"
                             style="
                         position: absolute; overflow: hidden; display: inline-block; width: 100%; height: 113vh; top: 0px; left: 0px; margin-top: -10vh; opacity: 0.5; pointer-events: none;">
                             <picture>
-                                <img src="assets/img/pexels-emma-bauso-2253870.jpg" alt="photo1cropped.jpg" width="250"
+                                <img src="assets/img/WSP_1776_NEW.jpg" alt="photo1cropped.jpg" width="250"
                                     height="612" loading="eager"
                                     style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; transition: none 0s ease 0s;">
                             </picture>
                         </div>
                         <div class="home-inner" id="home">
-                            <div class="is-inview"
-                                style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -130.8, 0, 1);">
-                                <div class="wow is-inview"
-                                    style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -47.7803, 0, 1);">
+                            <div class="is-inview">
+                                <div class="wow is-inview" 
+                                    data-scroll data-scroll-speed="2" data-scroll-delay="0.6"
+                                    >
                                     <div
                                         style="transform-style: preserve-3d; transition: transform 0.3s ease-in-out 0s; position: relative; will-change: transform;">
                                         <div class="us">
@@ -147,7 +148,7 @@
                         </div>
                     </section>
 
-                    <section class="when" id="when">
+                    <section data-scroll-section class="when" id="when">
                         <div class="box-dad">
                             <div class="box is-inview"
                                 style="box-shadow: rgb(26, 22, 13) 0px 0px 60px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -16.8, 0, 1);">
@@ -213,20 +214,52 @@
                                                 </div>
                                             </strong></span>
                                     </div>
-                                    <div class="sans-caps is-inview" data-scroll="true" data-scroll-speed="3"
+                                    <div class="sans-caps is-inview" data-scroll data-scroll-speed="3"
                                         data-scroll-target="#when"
                                         style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -8.4, 0, 1);">
-                                        Michelle and Tonye had a small wedding celebration! We said "I do", in the eyes
-                                        of God, family and friends (via livestream) here in Vancouver, BC.
+                                        Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa / Tuhan Yang Maha
+                                        Esa, Kami Bermasuk Mengundang Bapak/Ibu/Saudara/i pada upacara Manusa Yadnya
+                                        (Pawiwahan) putra-putri kami
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
+
+                    
+                    
+                    <div data-scroll-section class="content content--numbered story" id="story" style="]transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1680, 0, 1); opacity: 1; pointer-events: all;">
+                        <p class="content__pretitle is-inview" data-scroll="true" data-scroll-speed="2" >
+                            UPACARA MANUSA YADNYA 
+                            <br>
+                            PAWIWAHAN
+                            <br>
+                            <br>
+                            I Gede Elsa Putra <br>
+                            Putra pertama dari pasangan I Putu Papa Romeo dengan Ni Luh Mama Romeo
+                            <br>
+                            <br>
+                            Dengan
+                            <br>
+                            <br>
+                            Ni Putu Eka Utami Dewi <br>
+                            Putri pertama dari pasangan I Putu Papa Romeo dengan Ni Luh Mama Romeo
+                        </p>
+                    </div>
                 </div>
             </main>
         </div>
     </div>
+    <script src="assets/js/locomotive-scroll.min.js"></script>
+    <script>
+        (function () {
+            var scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth:true
+            });
+            console.log("test");
+        })();
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
