@@ -2958,12 +2958,11 @@ main {
 }
 @media (min-width: 641px) {
   .when .box .month {
-    margin-top: -2vh;
+    margin-bottom: 10vh;
   }
 }
 @media (min-width: 1025px) {
   .when .box .month {
-    margin-top: -35px;
     margin-bottom: 21px;
   }
 }
