@@ -2177,9 +2177,13 @@ main {
   width: 393px;
   transition: width 1s cubic-bezier(0.02, 0.13, 0, 0.99);
   overflow: hidden;
+  -webkit-transition: width 1s cubic-bezier(0.02, 0.13, 0, 0.99);
+  -moz-transition: width 1s cubic-bezier(0.02, 0.13, 0, 0.99);
+  -ms-transition: width 1s cubic-bezier(0.02, 0.13, 0, 0.99);
+  -o-transition: width 1s cubic-bezier(0.02, 0.13, 0, 0.99);
 }
 .scroll-container .mobile-menu.show .navigation .menu-items.expanded {
-  width: 423px;
+  width: 450px;
   transition: width 1s cubic-bezier(0.02, 0.13, 0, 0.99);
   transition-delay: 0.3s;
 }

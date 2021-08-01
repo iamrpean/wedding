@@ -24,7 +24,7 @@
                     <div class="mobile-menu show">
                         <div class="navigation expanded">
                             <div class="menu-items expanded">
-                                <span class="item" id="playPause">
+                                <span class="item" onclick="plyPauseButton(this)" id="playPause">
                                     Pause
                                 </span>
                                 <span class="item " href="#when">When &amp; Where</span>
@@ -345,7 +345,7 @@
         </div>
     </div>
     <div>
-        <audio id="audio" preload controls>
+        <audio id="audio" preload="none" controls controlsList="nodownload">
             <source src="assets/music/lagu_ka_eka.mp3" type="audio/mpeg">
         </audio>
     </div>
@@ -367,29 +367,39 @@
 
         $(document).ready(function(){
             
-        var lagu = document.getElementById('audio');
+        
         var playPause = document.getElementById('playPause');
         var isPlaying = false;
-        var end = 0;
-        var soundSprite = {
-            'all': [ 0, 7 ]
-        }
 
         
-        var audio = document.getElementById('audio');
 
-        playPause.addEventListener("click", function(){
-                if(this.className == 'item is-playing'){
-                    this.className = "item";
-                    this.innerHTML = "Play";
-                    audio.pause();
-                }else{
-                    this.className = "item is-playing";
-                    this.innerHTML = "Pause";
-                    audio.play();
-                }
-            });
+            // playPause.addEventListener("click", function(){
+            //     var audio = document.getElementById('audio');
+            //     if(this.className == 'item is-playing'){
+            //         this.className = "item";
+            //         this.innerHTML = "Play"
+            //         audio.pause();
+            //     }else{
+            //         this.className = "item is-playing";
+            //         this.innerHTML = "Pause";
+            //         audio.play();
+            //     }
+            // });
         });
+
+        function plyPauseButton(e){
+            var audio = document.getElementById('audio');
+            var classNow = $(e)[0].className;
+            if(classNow == 'item is-playing'){
+                $(e)[0].className = "item";
+                $(e)[0].innerHTML = "Play"
+                audio.pause();
+            }else{
+                $(e)[0].className = "item is-playing";
+                $(e)[0].innerHTML = "Pause";
+                audio.play();
+            }
+        }
     </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
