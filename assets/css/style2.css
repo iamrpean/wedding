@@ -2179,7 +2179,7 @@ main {
   overflow: hidden;
 }
 .scroll-container .mobile-menu.show .navigation .menu-items.expanded {
-  width: 450px;
+  width: 423px;
   transition: width 1s cubic-bezier(0.02, 0.13, 0, 0.99);
   transition-delay: 0.3s;
 }
